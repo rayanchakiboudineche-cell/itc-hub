@@ -1,26 +1,26 @@
 # ITC Hub
 
-Site web du club **IT Community (ITC)**, Université Saad Dahleb Blida.
-Les membres voient les événements, s'inscrivent et discutent avec un chatbot IA.
+Website of the **IT Community (ITC)** club, Saad Dahleb University of Blida.
+Members can browse events, register for them and chat with an AI assistant.
 
-## Fonctionnalités
-- Inscription, connexion, déconnexion
-- Liste des événements et détails
-- Inscription à un événement
-- Page admin pour créer des événements
-- Chatbot IA qui connaît les événements du club
-- 3 langues : Français, English, العربية (avec écriture de droite à gauche)
-- Design cyberpunk aux couleurs ITC, adapté au mobile
+## Features
+- Sign up, log in, log out
+- Events list and event details
+- Event registration
+- Admin page to create events
+- AI chatbot that knows the club's events
+- 3 languages: Français, English, العربية (with right-to-left layout)
+- Cyberpunk design in ITC colors, mobile friendly
 
-## Technologies
-- **Frontend** : React + Vite
-- **Backend** : Node.js + Express
-- **Base de données** : MongoDB Atlas
-- **IA** : Ollama (modèle llama3.2, en local)
+## Tech stack
+- **Frontend**: React + Vite
+- **Backend**: Node.js + Express
+- **Database**: MongoDB Atlas
+- **AI**: Ollama (llama3.2 model, running locally)
 
-## Lancer le projet
+## Run the project
 
-**Prérequis** : Node.js, un cluster MongoDB Atlas, Ollama (`ollama pull llama3.2`).
+**Requirements**: Node.js, a MongoDB Atlas cluster, Ollama (`ollama pull llama3.2`).
 
 **1. Backend**
 ```bash
@@ -28,34 +28,35 @@ cd backend
 npm install
 npm run dev
 ```
-Copie `.env.example` en `.env` et remplis tes valeurs.
+Copy `.env.example` to `.env` and fill in your values.
 
-**2. Frontend** (dans un autre terminal)
+**2. Frontend** (in another terminal)
 ```bash
 cd frontend
 npm install
 npm run dev
 ```
-Ouvre http://localhost:5173
+Open http://localhost:5173
 
-## Devenir admin
-Dans MongoDB Atlas, collection `users`, change `role` de `"member"` à `"admin"`, puis reconnecte-toi.
+## Become an admin
+In MongoDB Atlas, open the `users` collection, change `role` from `"member"` to `"admin"`, then log in again.
 
-## Structure
+## Project structure
 ```
 itc-hub/
-├── frontend/   (React : pages, API, langues)
-├── backend/    (Express : routes, models, middleware)
+├── frontend/   (React: pages, API, languages)
+├── backend/    (Express: routes, models, middleware)
 └── README.md
 ```
 
-## Sécurité
-- Mots de passe chiffrés (bcrypt)
-- Token dans un cookie httpOnly
-- Aucun secret sur GitHub (`.env` ignoré)
+## Security
+- Passwords hashed with bcrypt
+- Token stored in an httpOnly cookie
+- No secrets on GitHub (`.env` is ignored)
 
-## Pas encore fait
-Streaming du chat, cache Redis, déploiement AWS.
+## Not done yet
+Chat streaming, Redis cache, AWS deployment.
 
-## Auteur
+
+## Author
 [chakib oudineche]
